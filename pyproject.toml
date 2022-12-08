@@ -1,0 +1,49 @@
+
+[project]
+name = "aregs"
+version = "0.2.0a0"
+description = "Register API."
+authors = [
+    {name="", email=""}
+]
+requires-python = ">=3.8"
+
+dependencies = [
+]
+
+[tool.pdm.dev-dependencies]
+test = [
+"pytest"
+]
+gitlab = [
+"git+https://gittf.ams-osram.info/cis_validation/validation_utility.git@main"
+]
+
+[tool.pylint.reports]
+score = false
+
+[tool.pylint.format]
+max-line-length = 108
+
+[tool.pylint.basic]
+good-names = [
+    "i",
+]
+
+[tool.pylint.message_control]
+disable = [
+    "fixme",
+    "duplicate-code",
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 108
+
+[tool.ruff]
+line-length = 108
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
